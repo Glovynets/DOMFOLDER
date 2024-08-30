@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Realtime Validation</title>
+</head>
+
+<body>
+    <h3 style="padding-left:12%; background-color: blue; color: aliceblue; padding-right: 40%; margin: right 40%; border: 10cap; border-width: 10px;">Please Enter details to login</h3>
+    <div class="container" style="background-color: rgb(202, 232, 222); padding-left: 15%; margin-right: 50%; margin-left: 10%;">
+    <form action="" onsubmit="validate(event)">
+        <label for="email" style="color: blue;">Email</label> <br>
+        <input type="email" name="" id="email"><br>
+
+        <label for="Registration number">Student Number</label><br>
+        <input type="number" name="" id="studentNumber" min="2" max="8"><br>
+
+        <label for="Faculty">Faculty</label><br>
+        <input type="name"name="" id="faculty" min="4" max="4"><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="" id="password" min="8" max="14"><br>          
+                   
+               <button style="border-width: 10px; border-color: green;border-radius: 30%; font-weight: 10px ;">Submit to login</button><br><br>
+             
+        
+    </form>
+    <br>
+    <button style="margin: 1%; background-color: greenyellow;">Click to reset pasword</button>
+    <or><br>
+    <button style="background-color: black; color: cyan;">Click for new registration</button><br>
+
+</div>
+    <div id="message" style="border: 5cap; border-color: aquamarine; padding-left: 25%;background-color: rgb(232, 223, 241);"></div>
+
+    <script>
+        function validate(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;            
+            const Registrationnumber = document.getElementById("studentNumber").value;
+            const Faculty = document.getElementById("faculty").value;
+            const pass = document.getElementById("password").value;
+            const msgBox = document.getElementById("message");
+
+
+            if (email === "") {
+                message = "Enter your Valid email address";
+                msgBox.style.color = "Black";
+            }
+
+
+            else if (Registrationnumber === "") {
+                message = "Enter your Student Number to proceed";
+                msgBox.style.color = "blue";
+            }
+
+
+            else if (Faculty === "") {
+                message = "Enter your Faculty code";
+                msgBox.style.color = "maroon";
+
+
+            }
+            else if (pass === "") {
+                message = "Enter your password";
+                msgBox.style.color = "green";
+            }
+
+            else {
+                message = "You have successfully logged in. Welcome";
+                msgBox.style.color = "green";
+            }
+
+            msgBox.innerText = message;
+        }
+    </script>
+</body>
+
+</html>

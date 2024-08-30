@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Object Dat Structure and Array</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <h1>Object Data Structure Array</h1>
+  <script>
+
+    var child = {
+      Name: 'Abigail_Sharon',
+      Age: '8 years',
+      Grade: 'Three',
+      Sex: 'Female',
+      Hobbies: 'Bicycle_Riding'
+    };
+
+    let color = ["green", "blue", "yellow", "white", "purpple"];
+
+    document.write("Child name is: " +child.Name, "<br>",
+      "Child age is: " +child.Age, "<br>",
+      "Child Grade is: " +child.Grade, "<br>",     
+      "Child hobbies is: " +child.Hobbies, "<br>",
+      "Child sex is: " +child.Sex, "<br>",
+    )
+    
+    document.write("Before poping the colors are: " +color.join("//"), "<br>");
+
+
+    document.write("Abigail favourite color is: " +color[0], "<br>");
+
+    document.write(color.pop() +"<br>");
+  
+    document.write("After poping the colors are: " +color.join("~~"));
+    
+
+
+    
+  </script>
+</body>
+
+</html>

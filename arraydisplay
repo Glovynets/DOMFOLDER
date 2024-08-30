@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Reset Password</title>
+  
+</head>
+
+<body>
+  <h3>Login failed</h3>
+  <p id="pwd">Did you forget password?</p>
+  <button type="button" onclick="myFunction()"> Click to reset password</button>
+ 
+  <script>
+function myFunction() {
+  document.getElementById("pwd").innerHTML = "reset password";
+}
+    
+  </script>
+</body>
+
+</html>
